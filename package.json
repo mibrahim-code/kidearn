@@ -1,0 +1,40 @@
+{
+  "name": "kidsearn3",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "autoprefixer": "^10.4.21",
+    "bootstrap": "^5.3.5",
+    "css-loader": "^7.1.2",
+    "jquery": "^3.7.1",
+    "next": "15.3.1",
+    "next-image-export-optimizer": "^1.19.0",
+    "next-transpile-modules": "^10.0.1",
+    "owl.carousel": "^2.3.4",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^10.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-owl-carousel": "^2.3.3",
+    "react-slick": "^0.30.3",
+    "sass-loader": "^16.0.5",
+    "slick-carousel": "^1.8.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.99.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.1",
+    "tailwindcss": "^4"
+  }
+}
