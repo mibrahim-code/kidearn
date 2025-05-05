@@ -10,8 +10,9 @@ export default function useOwlCarousel(ref, options) {
       const owlCarousel = (await import('owl.carousel')).default;
       
       window.$ = window.jQuery = $;
-      require('owl.carousel/dist/owl.carousel.min');
-      
+
+      // Dynamically import owl.carousel's minified version
+      await import('owl.carousel/dist/owl.carousel.min.css'); // Import the CSS if needed
       $(ref.current).owlCarousel(options);
       ref.current._owlCarouselInitialized = true;
     };

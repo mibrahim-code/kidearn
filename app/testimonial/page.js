@@ -7,16 +7,24 @@ export default function Testimonials() {
   useEffect(() => {
     // Initialize Owl Carousel here if you haven't done so globally
     if (typeof window !== 'undefined') {
-      require('owl.carousel'); // Import Owl Carousel if it's not globally loaded
-      $('.testimonial-one__carousel').owlCarousel({
-        items: 1,
-        margin: 0,
-        loop: true,
-        smartSpeed: 700,
-        nav: false,
-        dots: false,
-        autoplay: false,
-      });
+      // Dynamically import Owl Carousel and jQuery
+      const initCarousel = async () => {
+        const $ = (await import('jquery')).default;
+        await import('owl.carousel');
+        
+        // Initialize Owl Carousel
+        $('.testimonial-one__carousel').owlCarousel({
+          items: 1,
+          margin: 0,
+          loop: true,
+          smartSpeed: 700,
+          nav: false,
+          dots: false,
+          autoplay: false,
+        });
+      };
+
+      initCarousel();
     }
   }, []);
 
