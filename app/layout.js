@@ -5,7 +5,7 @@ import Footer from "./footer/page";
 import ExternalScripts from "./externalscripts/page";
 
 import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 import '../public/css/owl-theme-fixed.css';
 
 
