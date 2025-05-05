@@ -23,6 +23,14 @@ const nextConfig = {
         })
       );
     }
+
+    // Handle CSS imports from node_modules (if needed)
+    config.module.rules.push({
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader'],
+      include: /node_modules/,
+    });
+
     return config;
   },
 };
