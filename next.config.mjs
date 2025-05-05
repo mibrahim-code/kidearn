@@ -10,7 +10,7 @@ const nextConfig = {
   },
 
   images: {
-    domains: [], // Add image domains if needed
+    domains: [],
   },
 
   webpack(config, { isServer }) {
@@ -23,13 +23,6 @@ const nextConfig = {
         })
       );
     }
-
-    // Handle CSS imports from node_modules (if needed)
-    config.module.rules.push({
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader'],
-      include: /node_modules/,
-    });
 
     return config;
   },
