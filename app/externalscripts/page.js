@@ -34,7 +34,7 @@ export default function ExternalScripts() {
       <Script src="/js/lang.js" strategy="lazyOnload" />
       <Script src="/js/element.js" strategy="lazyOnload" />
       <Script src="/js/kidearn-toolbar.js" strategy="lazyOnload" />
-      <script src="/js/owl.carousel.min.js" defer/>
+      <Script src="/js/owl.carousel.min.js" defer/>
       {/* Missing Files */}
       {/* <Script src="/js/carousel.js" strategy="lazyOnload" />
       <Script src="/js/datajs" strategy="lazyOnload" />

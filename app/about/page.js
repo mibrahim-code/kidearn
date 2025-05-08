@@ -12,6 +12,7 @@ export default function About() {
       <EnrollSection/>
       <AboutTestimonial/>
       <AboutTeamSection/>
+
     </>
     
   );
