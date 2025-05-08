@@ -1,6 +1,6 @@
 'use client'
 import { useRef } from 'react';
-import useOwlCarousel from '@/useOwlCarousel';
+import useOwlCarousel from '@/app/useOwlCarousel';
 
 export default function BannerOne() {
   const carouselRef = useRef(null);
