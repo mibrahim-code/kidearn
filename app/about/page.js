@@ -1,5 +1,6 @@
 'use client';
 
+import ExternalScripts from "../externalscripts/page";
 import AboutHeader from "./aboutheader/page";
 import AboutTeamSection from "./aboutteamsection/page";
 import AboutTestimonial from "./abouttestimonial/page";
@@ -12,6 +13,7 @@ export default function About() {
       <EnrollSection/>
       <AboutTestimonial/>
       <AboutTeamSection/>
+      <ExternalScripts/>
 
     </>
     
