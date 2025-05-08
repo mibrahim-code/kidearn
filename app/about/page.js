@@ -1,10 +1,10 @@
 'use client';
+import AboutHeader from "./components/AboutHeader";
+import AboutTeamSection from "./components/AboutTeamSection";
+import AboutTestimonial from "./components/AboutTestimonial";
+import EnrollSection from "./components/EnrollSection";
 
-import ExternalScripts from "../externalscripts/page";
-import AboutHeader from "./aboutheader/page";
-import AboutTeamSection from "./aboutteamsection/page";
-import AboutTestimonial from "./abouttestimonial/page";
-import EnrollSection from "./enrollsection/page";
+
 
 export default function About() {
   return (
@@ -13,7 +13,6 @@ export default function About() {
       <EnrollSection/>
       <AboutTestimonial/>
       <AboutTeamSection/>
-      <ExternalScripts/>
 
     </>
     
