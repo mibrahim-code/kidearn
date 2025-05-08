@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
