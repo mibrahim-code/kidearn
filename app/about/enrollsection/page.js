@@ -5,8 +5,18 @@ import ExportedImage from "next-image-export-optimizer";
 
 const EnrollSection = () => {
   useEffect(() => {
-    // Function to initialize counter animations
-    const initCounters = () => {
+    // Load jQuery if not already loaded
+    if (typeof window !== 'undefined' && !window.jQuery) {
+      const script = document.createElement('script');
+      script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
+      script.async = true;
+      script.onload = initCounters;
+      document.head.appendChild(script);
+    } else {
+      initCounters();
+    }
+
+    function initCounters() {
       if (typeof window !== 'undefined' && window.jQuery) {
         $('.count-text').each(function () {
           const $this = $(this);
@@ -21,20 +31,19 @@ const EnrollSection = () => {
           });
         });
       }
-    };
+    }
 
-    // Initialize immediately
-    initCounters();
-
-    // Reinitialize when route changes (for Next.js client-side navigation)
+    // Reinitialize when route changes
     const handleRouteChange = () => {
-      setTimeout(initCounters, 100); // Small delay to ensure DOM is ready
+      setTimeout(initCounters, 100);
     };
 
-    window.addEventListener('routeChangeComplete', handleRouteChange);
+    // Use Next.js router events instead of custom event
+    const router = window.next.router;
+    router?.events?.on('routeChangeComplete', handleRouteChange);
     
     return () => {
-      window.removeEventListener('routeChangeComplete', handleRouteChange);
+      router?.events?.off('routeChangeComplete', handleRouteChange);
     };
   }, []);
 
